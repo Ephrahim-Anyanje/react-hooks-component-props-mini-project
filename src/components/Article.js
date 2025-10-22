@@ -1,14 +1,13 @@
 import React from "react";
 
 function Article({ title, date = "January 1, 1970", preview, minutes }) {
-  // Bonus: minutes to read logic
   let emoji = "";
   if (minutes < 30) {
     const cups = Math.ceil(minutes / 5);
     emoji = "☕️".repeat(cups);
   } else {
-    const bentos = Math.ceil(minutes / 10);
-    emoji = "🍱".repeat(bentos);
+    const bento = Math.ceil(minutes / 10);
+    emoji = "🍱".repeat(bento);
   }
 
   return (
